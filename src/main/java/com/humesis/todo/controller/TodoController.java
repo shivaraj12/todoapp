@@ -47,7 +47,7 @@ public class TodoController {
 		return new ResponseEntity<>(HttpStatus.OK) ;
 	}
 
-	@RequestMapping(value = "/todo/{id}/status", method = RequestMethod.PUT)
+	/*@RequestMapping(value = "/todo/{id}/status", method = RequestMethod.PUT)
 	public ResponseEntity<?> changeTodoStatus(@PathVariable int id, 
 			@RequestParam(value = "complete",required=true, defaultValue="0") boolean complete){
 		
@@ -55,6 +55,6 @@ public class TodoController {
 		todoService.completeTodo(id, status);
 		return new ResponseEntity<>(HttpStatus.OK) ;
 	}
-
+*/
 
 }
