@@ -1,5 +1,7 @@
 package com.humesis.todo.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,14 +22,19 @@ public class TodoController {
 	@Autowired
 	TodoService todoService;
 	
+	private static final Logger log = LoggerFactory.getLogger(TodoController.class);
+	
+	
 	@RequestMapping(value = "/todo", method = RequestMethod.GET)
 	public ResponseEntity<?> getTodoList(){
 
+		log.info("get all todo");
 		return new ResponseEntity<>(todoService.listAllTodo(),HttpStatus.OK) ;
 	}
 
 	@RequestMapping(value = "/todo/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> getTodoById(@PathVariable int id){
+		log.info("get todo with id : "+ id);
 		return new ResponseEntity<>(todoService.getTodoById(id),HttpStatus.OK) ;
 	}
 

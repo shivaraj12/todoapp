@@ -14,7 +14,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
-apply plugin: 'jacoco'
+
 
 group = 'com.humesis.todo'
 version = '0.0.1-SNAPSHOT'
@@ -41,6 +41,10 @@ dependencies {
 	compile group: 'de.codecentric', name: 'spring-boot-admin-server', version: '1.5.4'
 	compile group: 'de.codecentric', name: 'spring-boot-admin-server-ui', version: '1.5.4'
 	compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '1.5.4'
+	
+	
+	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-sleuth
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '1.3.0.RELEASE'
 	
 	runtime('com.h2database:h2')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
