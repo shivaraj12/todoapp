@@ -14,7 +14,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
-
+apply plugin: 'jacoco'
 
 group = 'com.humesis.todo'
 version = '0.0.1-SNAPSHOT'
